@@ -1,2 +1,3 @@
 # Skillrevive.web
-this is the official website of skillrevive
+this is the official webisite for skillrevive
+
