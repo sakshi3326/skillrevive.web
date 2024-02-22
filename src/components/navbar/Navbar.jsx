@@ -35,9 +35,9 @@ const Navbar = () => {
           <div className="skillrevive__navbar-menu_container-links">
             <p><a href="#home">Home</a></p>
             <p><a href="#wskillrevive">What is skillrevive?</a></p>
-            <p><a href="#possibility">Open AI</a></p>
-            <p><a href="#features">Case Studies</a></p>
-            <p><a href="#blog">Library</a></p>
+            <p><a href="#possibility">Browse Talents</a></p>
+            <p><a href="#features">Browse Works</a></p>
+            <p><a href="#blog">Blogs</a></p>
           </div>
           <div className="skillrevive__navbar-menu_container-links-sign">
             <p>Sign in</p>
