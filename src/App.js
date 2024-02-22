@@ -7,8 +7,8 @@ import WhatGPT3 from './containers/skillRevive/WhatGPT3';
 import Features from './containers/features/Features';
 import Possibility from './containers/possibility/Possibility';
 import CTA from './components/cta/CTA';
-
-
+import Blogs from './containers/blogs/Blog';
+import Footer from './components/footer/Footer';
 
 const App = () => {
     return (
@@ -22,6 +22,8 @@ const App = () => {
           <Features/>
           <Possibility/>
           <CTA/>
+          <Blogs/>
+          <Footer/>
           
           
           
