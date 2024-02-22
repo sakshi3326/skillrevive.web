@@ -10,7 +10,7 @@ const Footer = () => (
     </div>
 
     <div className="gpt3__footer-btn">
-      <p>Request Early Access</p>
+      <p>Get Started</p>
     </div>
 
     <div className="gpt3__footer-links">
@@ -40,7 +40,7 @@ const Footer = () => (
     </div>
 
     <div className="gpt3__footer-copyright">
-      <p>@2021 GPT-3. All rights reserved.</p>
+      <p>@2021 SkillRevive. All rights reserved.</p>
     </div>
   </div>
 );
