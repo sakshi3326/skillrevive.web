@@ -1,13 +1,13 @@
 import React from 'react';
 import people from '../../assets/people.png';
-import ai from '../../assets/ai.png';
+import ai from '../../assets/header.png';
 import './header.css';
 
 const Header = () => (
   <div className="skillrevive__header section__padding" id="home">
     <div className="skillrevive__header-content">
-      <h1 className="gradient__text">Revive Your Skills, Revive Yourself</h1>
-      <p>Tired of getting rejection email? It is the time to work on yourself and be independent, revive your skills, meet new people work together right now right here!</p>
+      <h1 className="gradient__text">Revitalize your craft, Reactivate your draft</h1>
+      <p>Sick of rejection emails? It's time to elevate yourself and revive your talents. Let's prosper together...</p>
 
       <div className="skillrevive__header-content__input">
         <input type="email" placeholder="Your Email Address" />
