@@ -20,6 +20,7 @@ const Navbar = () => {
           <p><a href="#possibility">Browse Talents</a></p>
           <p><a href="#features">Browse Works</a></p>
           <p><a href="#blog">Blogs</a></p>
+          <p><a href="#chat">Chat with us</a></p>
         </div>
       </div>
       <div className="skillrevive__navbar-sign">
@@ -38,6 +39,7 @@ const Navbar = () => {
             <p><a href="#possibility">Browse Talents</a></p>
             <p><a href="#features">Browse Works</a></p>
             <p><a href="#blog">Blogs</a></p>
+            <p><a href="#chat">Chat with us</a></p>
           </div>
           <div className="skillrevive__navbar-menu_container-links-sign">
             <p>Sign in</p>
