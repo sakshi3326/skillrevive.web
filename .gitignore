@@ -1,1 +1,44 @@
-node_modules
+# Dependency directories
+/node_modules
+
+# Production build directory
+/build
+
+# Directory for cache and other generated files (npm, yarn, etc.)
+/.cache
+/.npm
+/.yarn
+/yarn-error.log
+/.pnp
+.pnp.js
+
+# IDE/Editor specific files
+.idea
+.vscode
+*.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sln
+*.suo
+*.user
+*.sln.docstates
+thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+npm-debug.log*
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+*.log
+
+
