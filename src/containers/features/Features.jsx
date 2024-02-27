@@ -4,20 +4,28 @@ import './features.css';
 
 const featuresData = [
   {
-    title: 'Improving end distrusts instantly',
-    text: 'From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.',
+    title: 'Mobile App Development',
+    title2: 'Backend Development',
   },
   {
-    title: 'Become the tended active',
-    text: 'Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.',
+    title: 'Website Development',
+    title2: 'Frontend Development',
   },
   {
-    title: 'Message or am nothing',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.',
+    title: 'DevOps Engineer',
+    title2: 'Translator',
   },
   {
-    title: 'Really boy law county',
-    text: 'Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush..',
+    title: 'Graphic Designer',
+    title2: 'Assignment Writer',
+  },
+  {
+    title: 'Video Editor',
+    title2: 'Digital Marketing',
+  },
+  {
+    title: 'Content Writer',
+    title2: 'Creative PPT Making',
   },
 ];
 
@@ -29,7 +37,7 @@ const Features = () => (
     </div>
     <div className="gpt3__features-container">
       {featuresData.map((item, index) => (
-        <Feature title={item.title} text={item.text} key={item.title + index} />
+        <Feature title={item.title} title2={item.title2}  key={item.title + index} />
       ))}
     </div>
   </div>
