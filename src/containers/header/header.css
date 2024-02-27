@@ -1,6 +1,7 @@
 .skillrevive__header {
     display: flex;
     flex-direction: row;
+    
 }
 
 .skillrevive__header-content {
@@ -105,6 +106,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .skillrevive__header-image img {
