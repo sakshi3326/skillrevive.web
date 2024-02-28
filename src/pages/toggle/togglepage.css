@@ -7,7 +7,7 @@
 }
 
 .top-panel {
-  flex: 2.5;
+  flex: 3;
   /* background-color: #3498db;  */
 }
 .button {
@@ -18,7 +18,7 @@
   /* background-color: orange; */
 }
 .bottom-panel {
-  flex: 1.4;
+  flex: 1;
   /* background-color: #2ecc71;  */
   display: flex;
   justify-content: space-between; /* To position the images at the start and end of the row */

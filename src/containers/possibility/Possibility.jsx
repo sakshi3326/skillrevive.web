@@ -1,5 +1,5 @@
 import React from 'react';
-import possibilityImage from '../../assets/noperson.jpeg';
+import possibilityImage from '../../assets/upliftednoperson.png';
 import './possibility.css';
 import { MdCheckCircle, MdSettings } from 'react-icons/md'; 
 const Possibility = () => (

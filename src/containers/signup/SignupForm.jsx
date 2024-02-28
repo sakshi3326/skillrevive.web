@@ -6,6 +6,7 @@ import Lottie from 'react-lottie';
 import * as welcomeanimation from '../../lottie/signup.json';
 import Logo from "../../assets/logo.png";
 import './signup.css';
+import namaste from '../../assets/namaste.png'
 import GoogleSvg from "../../assets/icons8-google.svg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 const SignupForm = () => {
@@ -49,8 +50,12 @@ const SignupForm = () => {
             <img src={Logo} alt="" />
           </div> */}
           <div className="login-center">
-            <h2>Welcome !</h2>
-            <p>Please Register Yourself</p>
+             <div className="greetings">
+              <h2>Namaste</h2>
+              <img height={130} src={namaste} alt=""/>
+              </div>
+              <p>Please Register Yourself</p>
+              
             <form onSubmit={formik.handleSubmit}>
               <input
                 type="text"
