@@ -12,7 +12,7 @@ const Header = () => (
 
       <div className="skillrevive__header-content__input">
         <input type="email" placeholder="Your Email Address" />
-        <NavLink to="/signup">
+        <NavLink to="/toggle">
           <button type="button">Get Started</button>
         </NavLink>
         </div>
