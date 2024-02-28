@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup"; // Import Yup for form validation
 import Image from "../../assets/welcome.png";
+import Lottie from 'react-lottie';
+import * as welcomeanimation from '../../lottie/signup.json';
 import Logo from "../../assets/logo.png";
 import './signup.css';
 import GoogleSvg from "../../assets/icons8-google.svg";
@@ -29,7 +31,17 @@ const SignupForm = () => {
   return (
     <div className="login-main">
       <div className="login-left">
-        <img src={Image} alt="" />
+      <Lottie 
+          options={{
+            loop: true,
+            autoplay: true,
+            animationData: welcomeanimation.default,
+            rendererSettings: {
+              preserveAspectRatio: 'xMidYMid slice'
+            }
+          }}
+          
+        />
       </div>
       <div className="login-right">
         <div className="login-right-container">
