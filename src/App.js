@@ -9,26 +9,32 @@ import Possibility from './containers/possibility/Possibility';
 import CTA from './components/cta/CTA';
 import Blogs from './containers/blogs/Blog';
 import Footer from './components/footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SignupPage from '../src/pages/signup/Signup';
 
 const App = () => {
     return (
-      <div className="App">
-          <div className="gradient__bg">
-              <Navbar/>
-              <Header/>
-          </div >
-          <Brand/>
-          <WhatGPT3/>
-          <Features/>
-          <Possibility/>
-          <CTA/>
-          <Blogs/>
-          <Footer/>
-          
-          
-          
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/" element={
+            <div className="App">
+              <div className="gradient__bg">
+                <Navbar />
+                <Header />
+              </div>
+              <Brand />
+              <WhatGPT3 />
+              <Features />
+              <Possibility />
+              <CTA />
+              <Blogs />
+              <Footer />
+            </div>
+          } />
+        </Routes>
+      </BrowserRouter>
     )
-  }
-  
-  export default App
+}
+
+export default App;

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-
-
 import './navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -25,7 +24,11 @@ const Navbar = () => {
       </div>
       <div className="skillrevive__navbar-sign">
         <p>Sign in</p>
-        <button type="button">Sign up</button>
+        
+        <NavLink to="/signup">
+          <button type="button">Sign up</button>
+        </NavLink>
+       
       </div>
       <div className="skillrevive__navbar-menu">
         {toggleMenu

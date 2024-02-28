@@ -2,6 +2,7 @@ import React from 'react';
 import people from '../../assets/people.png';
 import ai from '../../assets/header.png';
 import './header.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => (
   <div className="skillrevive__header section__padding" id="home">
@@ -11,8 +12,10 @@ const Header = () => (
 
       <div className="skillrevive__header-content__input">
         <input type="email" placeholder="Your Email Address" />
-        <button type="button">Get Started</button>
-      </div>
+        <NavLink to="/signup">
+          <button type="button">Get Started</button>
+        </NavLink>
+        </div>
 
       <div className="skillrevive__header-content__people">
         <img src={people} />

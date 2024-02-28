@@ -21,11 +21,11 @@ const Footer = () => (
         
       </div>
       <div className="gpt3__footer-links_div">
-        <h4>Links</h4>
+        <h4>Social media handles</h4>
         <div className='socialmedia'>
-        <img src={instaicon} alt="gpt3_logo" style={{ width: '1em', height: '1em' }} />
-        <img src={linkdinicon} alt="gpt3_logo" style={{ width: '1em', height: '1em' }} />
-        <img src={facebookicon} alt="gpt3_logo" style={{ width: '1em', height: '1em' }} />
+        <img src={instaicon} alt="gpt3_logo" style={{ width: '2em', height: '2em' }} />
+        <img src={linkdinicon} alt="gpt3_logo" style={{ width: '2em', height: '2em' }} />
+        <img src={facebookicon} alt="gpt3_logo" style={{ width: '2em', height: '2em' }} />
         </div>
       </div>
       <div className="gpt3__footer-links_div">
