@@ -11,12 +11,14 @@ import Blogs from './containers/blogs/Blog';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SignupPage from '../src/pages/signup/Signup';
-
+import TogglePage from '../src/pages/toggle/TogglePage';
 const App = () => {
     return (
       <BrowserRouter>
         <Routes>
           <Route path="/signup" element={<SignupPage />} />
+          <Route path="/toggle" element={<TogglePage />} />
+
           <Route path="/" element={
             <div className="App">
               <div className="gradient__bg">

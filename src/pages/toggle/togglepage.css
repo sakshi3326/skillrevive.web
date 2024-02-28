@@ -1,0 +1,32 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.top-panel {
+  flex: 2.5;
+  /* background-color: #3498db;  */
+}
+.button {
+  display: flex;
+  
+  justify-content: center;
+  
+  /* background-color: orange; */
+}
+.bottom-panel {
+  flex: 1.4;
+  /* background-color: #2ecc71;  */
+  display: flex;
+  justify-content: space-between; /* To position the images at the start and end of the row */
+}
+
+.start-img,
+.end-img {
+  width: 230px; /* Adjust width as needed */
+  height: auto; /* To maintain aspect ratio */
+  margin-bottom: 8px;
+}

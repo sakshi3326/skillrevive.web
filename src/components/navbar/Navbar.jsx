@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="skillrevive__navbar-sign">
         <p>Sign in</p>
         
-        <NavLink to="/signup">
+        <NavLink to="/toggle">
           <button type="button">Sign up</button>
         </NavLink>
        
