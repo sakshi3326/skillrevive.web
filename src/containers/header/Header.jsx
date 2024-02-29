@@ -8,7 +8,7 @@ const Header = () => (
   <div className="skillrevive__header section__padding" id="home">
     <div className="skillrevive__header-content">
       <h1 className="gradient__text">Revitalize your craft, Reactivate your draft</h1>
-      <p>Sick of rejection emails? It's time to elevate yourself and revive your talents. Let's prosper together...</p>
+      <p>Sick of rejection emails?! It's time to elevate yourself and revive your talents. Let's prosper together...</p>
 
       <div className="skillrevive__header-content__input">
         <input type="email" placeholder="Your Email Address" />

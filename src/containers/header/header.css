@@ -1,23 +1,27 @@
+
+
 .skillrevive__header {
     display: flex;
-    flex-direction: row;
-  
-    
+    flex-direction: row;  
 }
 
 
 .skillrevive__header-content {
+   
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     margin-right: 5rem;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    
 }
 
 .skillrevive__header-content h1 {
     font-family: var(--font-family);
-    font-weight: 800;
+    font-weight: 500;
     font-size: 62px;
     line-height: 75px;
     letter-spacing: -0.04em;
@@ -111,7 +115,7 @@
 }
 
 .skillrevive__header-image img {
-    width: 85%;
+    width: 81%;
     height: 100%;
 }
 
