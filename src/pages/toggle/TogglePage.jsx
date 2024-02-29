@@ -35,7 +35,7 @@ function App() {
               <span className="check-icon"></span>
               <div className="card-content">
                 <img
-                  src={team}
+                  src={freelancer}
                   alt=""
                 />
                 <h4>Join as a freelancer</h4>
@@ -49,10 +49,9 @@ function App() {
             <div className="card-content-wrapper">
               <span className="check-icon"></span>
               <div className="card-content">
-                <img
-                  src={freelancer}
-                  alt=""
-                />
+                <img src={team} alt="" />
+                  
+                
                 <h4>Join as a team</h4>
                 <h5>Bring your own team to grab big projects.</h5>
               </div>

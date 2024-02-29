@@ -1,5 +1,5 @@
 import React from 'react';
-import gpt3Logo from '../../../src/assets/skillrevive.png';
+import gpt3Logo from '../../../src/assets/updatedlogo.png';
 import './footer.css';
 import instaicon from '../../assets/instagram.svg';
 import linkdinicon from '../../assets/linkdin.svg';
