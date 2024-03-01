@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup"; // Import Yup for form validation
 import Image from "../../assets/welcome.png";
-import Lottie from 'react-lottie';
-import * as welcomeanimation from '../../lottie/signup.json';
+import Lottie from "react-lottie";
+import * as welcomeanimation from "../../lottie/signup.json";
 import Logo from "../../assets/logo.png";
-import './signup.css';
-import namaste from '../../assets/namaste.png'
+import "./signup.css";
+import namaste from "../../assets/namaste.png";
 import GoogleSvg from "../../assets/icons8-google.svg";
+import { NavLink } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 const SignupForm = () => {
-    const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -32,16 +33,15 @@ const SignupForm = () => {
   return (
     <div className="login-main">
       <div className="login-left">
-      <Lottie 
+        <Lottie
           options={{
             loop: true,
             autoplay: true,
             animationData: welcomeanimation.default,
             rendererSettings: {
-              preserveAspectRatio: 'xMidYMid slice'
-            }
+              preserveAspectRatio: "xMidYMid slice",
+            },
           }}
-          
         />
       </div>
       <div className="login-right">
@@ -50,12 +50,12 @@ const SignupForm = () => {
             <img src={Logo} alt="" />
           </div> */}
           <div className="login-center">
-             <div className="greetings">
+            <div className="greetings">
               <h2>Namaste</h2>
-              <img height={130} src={namaste} alt=""/>
-              </div>
-              <p>Please Register Yourself</p>
-              
+              <img height={130} src={namaste} alt="" />
+            </div>
+            <p>Please Register Yourself</p>
+
             <form onSubmit={formik.handleSubmit}>
               <input
                 type="text"
@@ -105,7 +105,10 @@ const SignupForm = () => {
           </div>
 
           <p className="login-bottom-p">
-            Already have an account? <a href="#">Login</a>
+            Already have an account?
+            <NavLink to="/login">
+              <a href="#">Login</a>
+            </NavLink>
           </p>
         </div>
       </div>
@@ -114,4 +117,3 @@ const SignupForm = () => {
 };
 
 export default SignupForm;
-
