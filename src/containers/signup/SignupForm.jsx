@@ -63,6 +63,7 @@ const SignupForm = () => {
                 name="userName" // Add a name attribute for formik
                 onChange={formik.handleChange}
                 value={formik.values.userName}
+                style={{ backgroundColor: "#feffdd"}}
               />
               {formik.touched.userName && formik.errors.userName ? (
                 <div className="error">{formik.errors.userName}</div>
@@ -73,6 +74,7 @@ const SignupForm = () => {
                 name="email" // Add a name attribute for formik
                 onChange={formik.handleChange}
                 value={formik.values.email}
+                style={{ backgroundColor: "#feffdd"}}
               />
               {formik.touched.email && formik.errors.email ? (
                 <div className="error">{formik.errors.email}</div>
@@ -84,6 +86,7 @@ const SignupForm = () => {
                   name="password" // Add a name attribute for formik
                   onChange={formik.handleChange}
                   value={formik.values.password}
+                  style={{ backgroundColor: "#feffdd"}}
                 />
                 {showPassword ? (
                   <FaEyeSlash onClick={() => setShowPassword(!showPassword)} />
