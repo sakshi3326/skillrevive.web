@@ -63,6 +63,7 @@ const Login = () => {
                 placeholder="Enter valid email address"
                 onChange={formik.handleChange}
                 value={formik.values.email}
+                style={{ backgroundColor: "#feffdd"}}
               />
               {formik.touched.email && formik.errors.email ? (
                 <div className="required">{formik.errors.email}</div>
@@ -75,6 +76,8 @@ const Login = () => {
                 placeholder="Enter Password"
                 onChange={formik.handleChange}
                 value={formik.values.password}
+                style={{ backgroundColor: "#feffdd"}}
+
               />
               {formik.touched.password && formik.errors.password ? (
                 <div className="required">{formik.errors.password}</div>
