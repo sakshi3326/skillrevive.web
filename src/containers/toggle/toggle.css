@@ -120,9 +120,7 @@ img {
 	--transition: 200ms linear;
 }
 
-label.radio-card {
-	cursor: pointer;
-}
+
 
 .card-content-wrapper {
 	background: #fff;
@@ -134,15 +132,7 @@ label.radio-card {
 	box-shadow: 0 2px 4px 0 rgba(219, 215, 215, 0.04);
 	transition: var(--transition);
 }
-.check-icon {
-	width: 20px;
-	height: 20px;
-	display: inline-block;
-	border: solid 2px #e3e3e3;
-	border-radius: 50%;
-	transition: var(--transition);
-	position: relative;
-}
+
 
 .check-icon:before {
 	content: '';
