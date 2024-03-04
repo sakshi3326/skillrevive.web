@@ -6,91 +6,98 @@
   margin: 0px;
 }
 html {
-    font-size: 13px;
-  }
+  font-size: 13px;
+}
 body {
-    font-family: "Poppins", sans-serif;
-    height: 100vh;
-  }
-  .login-main {
-    display: flex;
-    padding: 3rem;
-  }
-  .greetings {
-    display: flex; /* Use flexbox to align items */
-    align-items: center; /* Align items vertically */
-    justify-content: center;
-  }
-  
-  h2, p {
-    margin: 0; /* Remove default margins */
-  }
-  
-  img {
-    margin-left: 10px; /* Adjust margin to create space between text and image */
-    width: 50px; /* Adjust width as needed */
-    height: 50px; /* Adjust height as needed */
-  }
-  
-  .login-left {
-    flex: 1; /* This will make the left side take up 50% of the available space */
-    height: 85vh;
-    /* background-color: #e9e9e9; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .login-left img {
-    max-width: 100%;
-    height: 100vh; /* Make sure the image doesn't exceed the container width */
-  }
-  .login-right {
-    flex: 1; /* This will make the right side take up 50% of the available space */
-    height: 100vh;
-  }
-  
-  .login-right-container {
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .login-right form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-logo {
-    align-self: center;
-    padding-top: 50px;
-  }
-  
-  .login-center {
-    margin: auto 0;
-  }
-  
-  .login-logo img {
-    width: 50px;
-  }
-  
-  .login-center h2 {
-    font-size: 3.5rem;
-  }
-  
-  .login-center {
-    text-align: center;
-  }
-  
-  .login-center p {
-    font-weight: 400;
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  form input[type="email"],
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+.login-main {
+  display: flex;
+  padding: 3rem;
+}
+.greetings {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+}
+
+h2,
+p {
+  margin: 0; /* Remove default margins */
+}
+
+img {
+  margin-left: 10px; /* Adjust margin to create space between text and image */
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+}
+
+.login-left {
+  flex: 1; /* This will make the left side take up 50% of the available space */
+  height: 85vh;
+  /* background-color: #e9e9e9; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left img {
+  max-width: 100%;
+  height: 100vh; /* Make sure the image doesn't exceed the container width */
+}
+.login-right {
+  flex: 1; /* This will make the right side take up 50% of the available space */
+  height: 100vh;
+}
+
+.login-right-container {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: transparent;
+}
+
+.login-logo {
+  align-self: center;
+  padding-top: 50px;
+}
+
+.login-center {
+  margin: auto 0;
+}
+
+.login-logo img {
+  width: 50px;
+}
+
+.login-center h2 {
+  font-size: 3.5rem;
+}
+
+.login-center {
+  text-align: center;
+}
+
+.login-center p {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+form input[type="email"],
 form input[type="password"],
 form input[type="text"] {
   width: 100%;
@@ -215,7 +222,7 @@ form button[type="button"] {
   text-decoration: underline;
 }
 @media only screen and (max-width: 750px) {
-    .login-left {
-      display: none;
-    }
+  .login-left {
+    display: none;
   }
+}

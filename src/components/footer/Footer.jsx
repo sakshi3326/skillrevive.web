@@ -14,9 +14,9 @@ const Footer = () => (
     </div>
 
     <div className="gpt3__footer-btn">
-      <NavLink to="/toggle">
-        <p>Get Started</p>
-      </NavLink>
+      {/* <NavLink to="/toggle"> */}
+      <p>Get Started</p>
+      {/* </NavLink> */}
     </div>
 
     <div className="gpt3__footer-links">
