@@ -32,7 +32,15 @@
     line-height: 30px;
     color: #71E5FF;
 }
-
+.list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.highlights{
+    color: white;
+    font-size: larger;
+}
 .gpt3__possibility-content h4:last-child {
     color: #ff8A71;
 }

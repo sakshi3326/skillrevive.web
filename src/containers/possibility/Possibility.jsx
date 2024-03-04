@@ -12,10 +12,12 @@ const Possibility = () => (
       <h1 className="gradient__text">The possibilities are <br /> beyond your imagination</h1>
       <p>Equip yourself to work alongside us, where you'll encounter numerous possibilities for project completion, skill advancement, and revenue generation, all while securing regular work opportunities.</p>
       <h1 className="gradient__text">Elevate your work game <br/> with ease.</h1>
-      <ul>
-        <li><MdCheckCircle /> List item 1</li>
-        <li><MdCheckCircle /> List item 2</li>
-        <li><MdSettings /> List item 3</li>
+      <ul className='list'>
+        <div className='highlights'><MdCheckCircle />Easy To join and start earning</div>
+        <div className='highlights'><MdCheckCircle />Join as individual freelancer or with your own team</div>
+
+        <div className='highlights'><MdCheckCircle />Post a need and bid on 3 freelancers to make process faster</div>
+        <div className='highlights'><MdCheckCircle />Assistant service for each freelancer and client pair</div>
       </ul>
       <h4>Start Your Journey Here</h4>
     </div>

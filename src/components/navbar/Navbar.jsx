@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
-
+import ChatPopup from "../chatbot/ChatPopup";
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [showChatPopup, setShowChatPopup] = useState(false); // State to manage chat popup
 
   return (
     <div className="skillrevive__navbar">
@@ -30,7 +31,7 @@ const Navbar = () => {
             <a href="#blog">Blogs</a>
           </p>
           <p>
-            <a href="#chat">Chat with us</a>
+          <a href="#chat" >Chat with us</a> 
           </p>
         </div>
       </div>
@@ -76,7 +77,7 @@ const Navbar = () => {
                 <a href="#blog">Blogs</a>
               </p>
               <p>
-                <a href="#chat">Chat with us</a>
+              <a href="#chat" onClick={() => setShowChatPopup(true)}>Chat with us</a> {/* Open chat popup when clicked */}
               </p>
             </div>
             <div className="skillrevive__navbar-menu_container-links-sign">
@@ -86,6 +87,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      {showChatPopup && <ChatPopup />}
     </div>
   );
 };
