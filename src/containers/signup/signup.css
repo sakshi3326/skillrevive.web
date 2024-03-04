@@ -28,7 +28,8 @@ p {
 }
 
 img {
-  margin-left: 10px; /* Adjust margin to create space between text and image */
+  /* margin-left: 10px;  */
+  /* Adjust margin to create space between text and image */
   width: 50px; /* Adjust width as needed */
   height: 50px; /* Adjust height as needed */
 }
