@@ -11,9 +11,9 @@ const CTA = () => (
       </h3>
     </div>
     <div className="gpt3__cta-btn">
-      <NavLink to="/toggle">
-        <button type="button">Get Started</button>
-      </NavLink>
+      {/* <NavLink to="/toggle"> */}
+      <button type="button">Get Started</button>
+      {/* </NavLink> */}
     </div>
   </div>
 );

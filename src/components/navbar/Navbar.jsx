@@ -19,30 +19,30 @@ const Navbar = () => {
             <a href="#home">Home</a>
           </p>
           <p>
-            <a href="#wskillrevive">What is skillrevive?</a>
+            <a href="#wgpt3">What is skillrevive?</a>
           </p>
           <p>
-            <a href="#possibility">Browse Talents</a>
+            <a href="#">Browse Talents</a>
           </p>
           <p>
-            <a href="#features">Browse Works</a>
+            <a href="#">Browse Works</a>
           </p>
           <p>
-            <a href="#blog">Blogs</a>
+            <a href="#">Blogs</a>
           </p>
           <p>
-          <a href="#chat" >Chat with us</a> 
+            <a href="#">Chat with us</a>
           </p>
         </div>
       </div>
       <div className="skillrevive__navbar-sign">
-        <NavLink to="/login">
-          <p>Sign in</p>
-        </NavLink>
+        {/* <NavLink to="/login"> */}
+        <p>Sign in</p>
+        {/*  </NavLink> */}
 
-        <NavLink to="/toggle">
-          <button type="button">Sign up</button>
-        </NavLink>
+        {/* <NavLink to="/toggle"> */}
+        <button type="button">Sign up</button>
+        {/* /</NavLink> */}
       </div>
       <div className="skillrevive__navbar-menu">
         {toggleMenu ? (
@@ -65,19 +65,22 @@ const Navbar = () => {
                 <a href="#home">Home</a>
               </p>
               <p>
-                <a href="#wskillrevive">What is skillrevive?</a>
+                <a href="#wgpt3">What is skillrevive?</a>
               </p>
               <p>
-                <a href="#possibility">Browse Talents</a>
+                <a href="#">Browse Talents</a>
               </p>
               <p>
-                <a href="#features">Browse Works</a>
+                <a href="#">Browse Works</a>
               </p>
               <p>
-                <a href="#blog">Blogs</a>
+                <a href="#">Blogs</a>
               </p>
               <p>
-              <a href="#chat" onClick={() => setShowChatPopup(true)}>Chat with us</a> {/* Open chat popup when clicked */}
+                <a href="#chat" onClick={() => setShowChatPopup(true)}>
+                  Chat with us
+                </a>{" "}
+                {/* Open chat popup when clicked */}
               </p>
             </div>
             <div className="skillrevive__navbar-menu_container-links-sign">
