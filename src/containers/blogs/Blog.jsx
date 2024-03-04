@@ -14,30 +14,30 @@ const Blog = () => (
       <div className="gpt3__blog-container_groupA">
         <Article
           imgUrl={blog01}
-          date="Sep 26, 2021"
-          text="Its time to become earner"
+          date="Mar 10, 2024"
+          text="Riva128's groundbreaking contribution to NVIDIA's evolution as an industry leader."
         />
       </div>
       <div className="gpt3__blog-container_groupB">
         <Article
           imgUrl={blog02}
-          date="Sep 26, 2021"
-          text="How to get master in React"
+          date="Mar 10, 2024"
+          text="From humble beginnings to billionaire status: Google's remarkable story."
         />
         <Article
           imgUrl={blog03}
-          date="Sep 26, 2021"
-          text="Is DevOps becoming future of the software industry?"
+          date="Mar 10, 2024"
+          text="The journey of Porter, a business model inspired by Ola, as it surged to a $500 million valuation."
         />
         <Article
           imgUrl={blog04}
-          date="Sep 26, 2021"
-          text="Not a tech enthusiast? Do not worry, here are non tech fields to get expert in"
+          date="Mar 10, 2024"
+          text="The rationale for backing startups in this forward-thinking nation."
         />
         <Article
           imgUrl={blog05}
-          date="Sep 26, 2021"
-          text="AI is killing Jobs? Know the Facts here "
+          date="Mar 10, 2024"
+          text="Prioritizing skills over degrees: Which holds more importance?"
         />
       </div>
     </div>
