@@ -1,49 +1,44 @@
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
-import { NavLink } from "react-router-dom";
-import ChatPopup from "../chatbot/ChatPopup";
+import Progress from "../popuppage/Progress";
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showChatPopup, setShowChatPopup] = useState(false); // State to manage chat popup
+  const [showPopup, setShowPopup] = useState(false); // State to manage the visibility of the popup
+
+  const handleOptionClick = () => {
+    setShowPopup(true); // Open the popup when any option is clicked
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false); // Close the popup
+  };
 
   return (
     <div className="skillrevive__navbar">
+      {/* Navbar links */}
       <div className="skillrevive__navbar-links">
+        {/* Logo */}
         <div className="skillrevive__navbar-links_logo">
-          {/* <img src={logo} alt="logo" /> */}
           <h1>SkillRevive</h1>
         </div>
+        {/* Navigation links */}
         <div className="skillrevive__navbar-links_container">
-          <p>
-            <a href="#home">Home</a>
-          </p>
-          <p>
-            <a href="#wgpt3">What is skillrevive?</a>
-          </p>
-          <p>
-            <a href="#">Browse Talents</a>
-          </p>
-          <p>
-            <a href="#">Browse Works</a>
-          </p>
-          <p>
-            <a href="#">Blogs</a>
-          </p>
-          <p>
-            <a href="#">Chat with us</a>
-          </p>
+          <p><a href="#home" onClick={handleOptionClick}>Home</a></p>
+          <p><a href="#wgpt3">What is skillrevive?</a></p>
+          <p><a href="#" onClick={handleOptionClick}>Browse Talents</a></p>
+          <p><a href="#" onClick={handleOptionClick}>Browse Works</a></p>
+          <p><a href="#" onClick={handleOptionClick}>Blogs</a></p>
+          <p><a href="#" onClick={handleOptionClick}>Chat with us</a></p>
         </div>
       </div>
+      {/* Sign up / Sign in buttons */}
       <div className="skillrevive__navbar-sign">
-        {/* <NavLink to="/login"> */}
-        <p>Sign in</p>
-        {/*  </NavLink> */}
-
-        {/* <NavLink to="/toggle"> */}
-        <button type="button">Sign up</button>
-        {/* /</NavLink> */}
+        <p onClick={handleOptionClick}>Sign in</p>
+        <button type="button" onClick={handleOptionClick}>Sign up</button>
       </div>
+      {/* Mobile menu toggle */}
       <div className="skillrevive__navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
@@ -58,39 +53,26 @@ const Navbar = () => {
             onClick={() => setToggleMenu(true)}
           />
         )}
+        {/* Mobile menu links */}
         {toggleMenu && (
           <div className="skillrevive__navbar-menu_container scale-up-center">
             <div className="skillrevive__navbar-menu_container-links">
-              <p>
-                <a href="#home">Home</a>
-              </p>
-              <p>
-                <a href="#wgpt3">What is skillrevive?</a>
-              </p>
-              <p>
-                <a href="#">Browse Talents</a>
-              </p>
-              <p>
-                <a href="#">Browse Works</a>
-              </p>
-              <p>
-                <a href="#">Blogs</a>
-              </p>
-              <p>
-                <a href="#chat" onClick={() => setShowChatPopup(true)}>
-                  Chat with us
-                </a>{" "}
-                {/* Open chat popup when clicked */}
-              </p>
+              <p><a href="#home" onClick={handleOptionClick}>Home</a></p>
+              <p><a href="#wgpt3">What is skillrevive?</a></p>
+              <p><a href="#" onClick={handleOptionClick}>Browse Talents</a></p>
+              <p><a href="#" onClick={handleOptionClick}>Browse Works</a></p>
+              <p><a href="#" onClick={handleOptionClick}>Blogs</a></p>
+              <p><a href="#" onClick={handleOptionClick}>Chat with us</a></p>
             </div>
             <div className="skillrevive__navbar-menu_container-links-sign">
-              <p>Sign in</p>
-              <button type="button">Sign up</button>
+              <p onClick={handleOptionClick}>Sign in</p>
+              <button type="button" onClick={handleOptionClick}>Sign up</button>
             </div>
           </div>
         )}
       </div>
-      {showChatPopup && <ChatPopup />}
+      {/* Render the popup */}
+      {showPopup && <Progress onClose={handleClosePopup} />}
     </div>
   );
 };

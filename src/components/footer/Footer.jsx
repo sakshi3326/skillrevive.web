@@ -27,16 +27,20 @@ const Footer = () => (
       <div className="gpt3__footer-links_div">
         <h4>Social media handles</h4>
         <div className="socialmedia">
+          <a href="https://www.instagram.com/skillrevive?igsh=cGIyOTc0M2Y1bzJn">
           <img
             src={instaicon}
             alt="gpt3_logo"
             style={{ width: "2em", height: "2em" }}
           />
+          </a>
+          <a href="https://www.linkedin.com/company/skillrevive/mycompany/">
           <img
             src={linkdinicon}
             alt="gpt3_logo"
             style={{ width: "2em", height: "2em" }}
           />
+          </a>
           <img
             src={facebookicon}
             alt="gpt3_logo"

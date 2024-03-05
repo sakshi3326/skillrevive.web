@@ -1,0 +1,54 @@
+/* Progress.css */
+
+.popup {
+  position: fixed;
+  height: 76%; /* Set the height to cover 70% of the viewport height */
+  width: 70%; /* Set the width to cover 70% of the viewport width */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(248, 249, 242, 0.9); /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for better visibility */
+  z-index: 9999; /* Ensure the popup appears on top of other elements */
+  animation: slideIn 0.5s ease forwards;}
+
+.popup-inner {
+  position: relative;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px; /* Adjust top position for spacing */
+  right: 10px; /* Adjust right position for spacing */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: black; /* Change the color to match your design */
+}
+
+.popup-text {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #171515;
+  font-weight: bold;
+  font-style: oblique;
+  fill-opacity: initial;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translate(-50%, -50%) scale(0.5); /* Start smaller and centered */
+}
+to {
+    opacity: 1; /* Fade in to full opacity */
+    transform: translate(-50%, -50%) scale(1); /* Scale to original size */
+}
+}
