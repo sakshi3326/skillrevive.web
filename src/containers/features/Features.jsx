@@ -4,32 +4,40 @@ import './features.css';
 
 const featuresData = [
   {
-    title: 'Improving end distrusts instantly',
-    text: 'From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.',
+    title: 'Mobile App Development',
+    title2: 'Backend Development',
   },
   {
-    title: 'Become the tended active',
-    text: 'Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.',
+    title: 'Website Development',
+    title2: 'Frontend Development',
   },
   {
-    title: 'Message or am nothing',
-    text: 'Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.',
+    title: 'DevOps Engineer',
+    title2: 'Translator',
   },
   {
-    title: 'Really boy law county',
-    text: 'Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush..',
+    title: 'Graphic Designer',
+    title2: 'Assignment Writer',
+  },
+  {
+    title: 'Video Editor',
+    title2: 'Digital Marketing',
+  },
+  {
+    title: 'Content Writer',
+    title2: 'Creative PPT Making',
   },
 ];
 
 const Features = () => (
   <div className="gpt3__features section__padding" id="features">
     <div className="gpt3__features-heading">
-      <h1 className="gradient__text">The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen.</h1>
-      <p>Request Early Access to Get Started</p>
+      <h1 className="gradient__text">Remain updated on contemporary trends and utilize your capabilities to capitalize on these burgeoning fields, thereby yielding revenue.</h1>
+      <p>Start Your Journey Here</p>
     </div>
     <div className="gpt3__features-container">
       {featuresData.map((item, index) => (
-        <Feature title={item.title} text={item.text} key={item.title + index} />
+        <Feature title={item.title} title2={item.title2}  key={item.title + index} />
       ))}
     </div>
   </div>

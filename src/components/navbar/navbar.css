@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 2rem 6rem;
+    
+     
+    padding: 3rem 6rem;
+    
 }
 
 .skillrevive__navbar-links {
@@ -17,6 +19,7 @@
     margin-right: 2rem;
     color: #fff;
 }
+
 
 .skillrevive__navbar-links_logo img {
     width: 62.56px;
