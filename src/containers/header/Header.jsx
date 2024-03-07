@@ -30,7 +30,7 @@ const Header = () => {
           <input type="email" placeholder="Your Email Address" />
           <button type="button" onClick={handleButtonClick}>Get Started</button>
         </div>
-
+ 
         <div className="skillrevive__header-content__people">
           <img src={people} alt="People" />
           <p>1,600 people got their freelancers in last 24 hours</p>
