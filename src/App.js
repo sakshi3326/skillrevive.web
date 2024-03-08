@@ -42,7 +42,6 @@ const App = () => {
         {/* Define your protected routes using the ProtectedRoute component */}
         <Route path="/profile" element={<Profile/>} />
         <Route path="/login" element={<Login />} />
-        
 
         <Route
           path="/"

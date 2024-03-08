@@ -1,0 +1,118 @@
+/* Progress.css */
+
+.popup {
+  position: fixed;
+  height: 76%;
+  width: 75%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(248, 249, 242, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  animation: slideIn 0.5s ease forwards;
+  /* overflow: hidden; Add overflow to hide overflowing content */
+}
+
+.popup-inner {
+  position:fixed;
+  text-align: center;
+  top: 20px;
+  left: 30%;
+  bottom: 70px;
+  width:max-content;
+}
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+}
+
+.popup-text {
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #171515;
+  font-weight: bold;
+  font-style: oblique;
+  fill-opacity: initial;
+  max-width: 100%; /* Limit text width to prevent overflowing */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for text overflow */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* Media queries for different screen sizes */
+@media screen and (max-width: 1440px) {
+  .popup {
+    width: 70%;
+    height: 70%;
+  }
+  .popup-inner 
+  {
+    top: 10%;
+    left:15%;
+    bottom: 10%;
+}
+}
+@media screen and (max-width: 700px) {
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+  }
+  .popup-inner {
+    height:30%;
+    margin-top:50%;
+    width:20%;
+    right:10%;
+    top: 25%;
+    left:7%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 50%;
+  }
+  .popup-inner {
+    height:80% ;
+    padding-left: 40px;
+    top: 2%;
+    width:70%;
+   padding-bottom:100px;
+   align-self: center;
+  }
+  .close-button {
+    z-index: 9999; /* Ensure the close button is above other elements */
+  }
+  .popup-text{
+    font-size: small;
+  }
+}
