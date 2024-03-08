@@ -10,7 +10,9 @@ import namaste from "../../assets/namaste.png";
 import GoogleSvg from "../../assets/icons8-google.svg";
 import { NavLink } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useAuth0 } from "@auth0/auth0-react";
 const SignupForm = () => {
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
   const [showPassword, setShowPassword] = useState(false);
 
   const formik = useFormik({
@@ -63,7 +65,7 @@ const SignupForm = () => {
                 name="userName" // Add a name attribute for formik
                 onChange={formik.handleChange}
                 value={formik.values.userName}
-                style={{ backgroundColor: "#feffdd"}}
+                style={{ backgroundColor: "#feffdd" }}
               />
               {formik.touched.userName && formik.errors.userName ? (
                 <div className="error">{formik.errors.userName}</div>
@@ -74,7 +76,7 @@ const SignupForm = () => {
                 name="email" // Add a name attribute for formik
                 onChange={formik.handleChange}
                 value={formik.values.email}
-                style={{ backgroundColor: "#feffdd"}}
+                style={{ backgroundColor: "#feffdd" }}
               />
               {formik.touched.email && formik.errors.email ? (
                 <div className="error">{formik.errors.email}</div>
@@ -86,7 +88,7 @@ const SignupForm = () => {
                   name="password" // Add a name attribute for formik
                   onChange={formik.handleChange}
                   value={formik.values.password}
-                  style={{ backgroundColor: "#feffdd"}}
+                  style={{ backgroundColor: "#feffdd" }}
                 />
                 {showPassword ? (
                   <FaEyeSlash onClick={() => setShowPassword(!showPassword)} />
@@ -99,7 +101,14 @@ const SignupForm = () => {
               ) : null}
               <div className="login-center-buttons">
                 <button type="submit">SignUp</button>
-                <button type="button">
+                <button
+                  type="button"
+                  onClick={() =>
+                    loginWithRedirect({
+                      screen_hint: "signup",
+                    })
+                  }
+                >
                   <img src={GoogleSvg} alt="" />
                   Continue with Google
                 </button>

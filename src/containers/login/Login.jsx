@@ -8,8 +8,10 @@ import { useFormik } from "formik"; // Formik import kiya gaya hai
 import * as Yup from "yup"; // Yup import kiya gaya hai
 import "./login.css";
 import { NavLink } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
+  const { loginWithRedirect,logout,user,isAuthenticated} = useAuth0();
   const [showPassword, setShowPassword] = useState(false);
 
   // Formik ka istemal karke form validation aur form state management kiya gaya hai
@@ -24,8 +26,16 @@ const Login = () => {
         .min(8, "Must be 8 characters or greater")
         .required("Required"),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: async (values) => {
+      try {
+        await loginWithRedirect({
+          screen_hint: 'login',
+          login_hint: values.email,
+          password: values.password,
+        });
+      } catch (error) {
+        console.error("Login error:", error.message);
+      }
     },
   });
 
@@ -96,9 +106,9 @@ const Login = () => {
               </div>
               <div className="login-center-buttons">
                 <button type="submit">Log In</button>
-                <button type="button">
+                <button type="button"  onClick={() => loginWithRedirect({ screen_hint: 'login', connection: 'google-oauth2' })}>
                   <img src={GoogleSvg} alt="" />
-                  Log In with Google
+                  Continue with Google
                 </button>
               </div>
             </form>
