@@ -25,18 +25,40 @@ const Navbar = () => {
         </div>
         {/* Navigation links */}
         <div className="skillrevive__navbar-links_container">
-          <p><a href="#home" onClick={handleOptionClick}>Home</a></p>
-          <p><a href="#wgpt3">What is skillrevive?</a></p>
-          <p><a href="#" onClick={handleOptionClick}>Browse Talents</a></p>
-          <p><a href="#" onClick={handleOptionClick}>Browse Works</a></p>
-          <p><a href="#" onClick={handleOptionClick}>Blogs</a></p>
-          <p><a href="#" onClick={handleOptionClick}>Chat with us</a></p>
+          <p>
+            <a href="#home">Home</a>
+          </p>
+          <p>
+            <a href="#wgpt3">What is skillrevive?</a>
+          </p>
+          <p>
+            <a href="#" onClick={handleOptionClick}>
+              Browse Talents
+            </a>
+          </p>
+          <p>
+            <a href="#" onClick={handleOptionClick}>
+              Browse Works
+            </a>
+          </p>
+          <p>
+            <a href="#" onClick={handleOptionClick}>
+              Blogs
+            </a>
+          </p>
+          <p>
+            <a href="#" onClick={handleOptionClick}>
+              Chat with us
+            </a>
+          </p>
         </div>
       </div>
       {/* Sign up / Sign in buttons */}
       <div className="skillrevive__navbar-sign">
         <p onClick={handleOptionClick}>Sign in</p>
-        <button type="button" onClick={handleOptionClick}>Sign up</button>
+        <button type="button" onClick={handleOptionClick}>
+          Sign up
+        </button>
       </div>
       {/* Mobile menu toggle */}
       <div className="skillrevive__navbar-menu">
@@ -57,16 +79,38 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="skillrevive__navbar-menu_container scale-up-center">
             <div className="skillrevive__navbar-menu_container-links">
-              <p><a href="#home" onClick={handleOptionClick}>Home</a></p>
-              <p><a href="#wgpt3">What is skillrevive?</a></p>
-              <p><a href="#" onClick={handleOptionClick}>Browse Talents</a></p>
-              <p><a href="#" onClick={handleOptionClick}>Browse Works</a></p>
-              <p><a href="#" onClick={handleOptionClick}>Blogs</a></p>
-              <p><a href="#" onClick={handleOptionClick}>Chat with us</a></p>
+              <p>
+                <a href="#home">Home</a>
+              </p>
+              <p>
+                <a href="#wgpt3">What is skillrevive?</a>
+              </p>
+              <p>
+                <a href="#" onClick={handleOptionClick}>
+                  Browse Talents
+                </a>
+              </p>
+              <p>
+                <a href="#" onClick={handleOptionClick}>
+                  Browse Works
+                </a>
+              </p>
+              <p>
+                <a href="#" onClick={handleOptionClick}>
+                  Blogs
+                </a>
+              </p>
+              <p>
+                <a href="#" onClick={handleOptionClick}>
+                  Chat with us
+                </a>
+              </p>
             </div>
             <div className="skillrevive__navbar-menu_container-links-sign">
               <p onClick={handleOptionClick}>Sign in</p>
-              <button type="button" onClick={handleOptionClick}>Sign up</button>
+              <button type="button" onClick={handleOptionClick}>
+                Sign up
+              </button>
             </div>
           </div>
         )}
