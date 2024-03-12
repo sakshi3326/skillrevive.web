@@ -1,0 +1,127 @@
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right-container {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container .input-field {
+  margin-right: 10px; /* Add margin-right to create space between left input fields */
+}
+
+.right-container .input-field {
+  margin-left: 10px; /* Add margin-left to create space between right input fields */
+}
+
+.profile-image-container {
+  width: 308px;
+  height: 307px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(172, 152, 152, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(4, 50, 84, 1) !important;
+  color: white;
+}
+
+.input-field::placeholder {
+  color: white; /* Set placeholder color to white */
+}
+
+#title {
+  width: 267px;
+}
+
+#description {
+  width: 308px;
+  height: 228px;
+}
+
+.text-fields {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.dropdowns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown {
+  width: calc(50% - 10px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .user-profile {
+    flex-direction: column;
+    margin-right: 15px; /* Change flex direction to column for phone screens */
+  }
+
+  .left-container,
+  .right-container {
+    flex: none; /* Remove flex-grow to prevent containers from stretching */
+    width: 100%; /* Set width to 100% to occupy the entire width */
+    margin-bottom: 20px; /* Add margin between the containers */
+  }
+
+  .left-container .text-fields,
+  .right-container .text-fields {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column for phone screens */
+  }
+
+  .left-container .text-fields .row,
+  .right-container .text-fields .row {
+    flex-direction: column; /* Change flex direction to column for phone screens */
+  }
+
+  .left-container .text-fields .row .input-field,
+  .right-container .text-fields .row .input-field {
+    margin: 0 10px 10px 10px;
+  }
+}
