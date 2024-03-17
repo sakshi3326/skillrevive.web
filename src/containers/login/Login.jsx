@@ -66,7 +66,7 @@ const Login = () => {
   }, [user, loading]);
 
   if (user) {
-    return <Navigate to="/profile" />;
+    return <Navigate to="/" />;
   }
 
   return (

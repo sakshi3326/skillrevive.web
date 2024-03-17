@@ -4,6 +4,9 @@ import ai from "../../assets/header.png";
 import "./header.css";
 import Progress from "../../components/popuppage/Progress"; // Import the Progress component
 
+
+
+
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false); // State to manage the visibility of the popup
 

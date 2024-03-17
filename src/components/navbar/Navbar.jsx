@@ -2,9 +2,20 @@ import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { firebaseAuth,logOut } from "../../pages/authenticated/firebase-config";
+
+
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [user, loading, error] = useAuthState(firebaseAuth);
+
+
+  const handleLogout = () => {
+    logOut(); // Call the logout function
+  };
 
   return (
     <div className="skillrevive__navbar">
@@ -35,6 +46,21 @@ const Navbar = () => {
         </div>
       </div>
       <div className="skillrevive__navbar-sign">
+      
+        {user ? (
+          
+          <div className="current_user_img" style={{display:"flex"}}>
+            <a href="/profile">
+              <img src={user.photoURL} alt="" />
+            </a>
+            {/* Display user's photo URL */}
+            {/* <p><strong>Photo URL:</strong> {user.photoURL}</p> */}
+            {/* Logout button */}
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+          
+        ) : (
+          <div style={{display:"flex"}}>
         <NavLink to="/login">
           <p>Sign in</p>
         </NavLink>
@@ -42,6 +68,8 @@ const Navbar = () => {
         <NavLink to="/toggle">
           <button type="button">Sign up</button>
         </NavLink>
+        </div>
+        )}
       </div>
       <div className="skillrevive__navbar-menu">
         {toggleMenu ? (
