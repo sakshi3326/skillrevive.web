@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "./UserProfile.css"; // Import your CSS file for styling
+import Avatar from "../../components/profileavatar/Avatar";
+import {NavLink} from 'react-router-dom';
 
 const UserProfile = () => {
   // State for selected image
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+
 
   // Function to handle image selection
+  // const handleImageChange = (image) => {
+  //   setSelectedImage(image);
+  //   setShowPopup(false); // Close the popup
+  // };
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -15,16 +23,42 @@ const UserProfile = () => {
     reader.readAsDataURL(file);
   };
 
+  // Function to handle choosing avatar
+  const handleAvatarClick = (avatarImage) => {
+    setSelectedImage(avatarImage);
+    setShowPopup(false); // Close the avatar popup
+  };
+
+  // Function to handle popup opening
+  const chooseImage = () => {
+    setShowPopup(true);
+  }
+
+  // Function to handle popup closing
+  const handleClosePopup = () => {
+    setShowPopup(false); // Close the popup
+  };
+
+   
+
   // Sample dropdown values
   const dropdownValues = [
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
-    "Option 5",
+    "HTML",
+    "React",
+    "DevOps",
+    "Android",
+    "iOS",
   ];
 
   return (
+    <div>
+      
+      <div className="task-btn-container">
+        <NavLink to="/task">
+         <button className="task-btn">Task Name</button>
+        </NavLink>
+      </div>
+      
     <div className="user-profile">
       {/* Left part of the screen */}
       <div className="left-container">
@@ -34,10 +68,9 @@ const UserProfile = () => {
             <img src={selectedImage} alt="Profile" className="profile-image" />
           ) : (
             <div className="profile-image-placeholder">
-              <label htmlFor="file-input">
-                <i className="fas fa-camera"></i>
-              </label>
-              <input type="file" id="file-input" onChange={handleImageChange} />
+             
+             <a href="#" onClick={chooseImage}>Choose Avatar</a>
+              
             </div>
           )}
         </div>
@@ -148,7 +181,15 @@ const UserProfile = () => {
             ))}
           </select>
         </div>
-      </div>
+      </div> 
+    </div>
+     {/* Save Updates Button */}
+    <div className="save-button-container">
+        <button  className="save-button">
+          Save Updates
+        </button>
+    </div>
+    {showPopup && <Avatar onClose={handleClosePopup} onAvatarClick={handleAvatarClick}/>}
     </div>
   );
 };

@@ -1,0 +1,134 @@
+
+
+.popup {
+    position: fixed;
+    height: 90%;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(248, 249, 242, 0.9); */
+    background-color:white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    animation: slideIn 0.5s ease forwards;
+    /* overflow: hidden; Add overflow to hide overflowing content */
+  }
+  
+ 
+  .close-button {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+  }
+ 
+  
+  
+  .image-grid {
+    margin-top: 30px;
+    margin-left: -50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px; 
+  }
+  
+  .avatar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+  }
+ 
+  
+  .avatar-card img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 8px; 
+  }
+  
+  .image-grid p {
+    text-align: center;
+    margin-top: 5px; /* Adjust spacing between image and title */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+  }
+
+  
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  /* Media queries for different screen sizes */
+  /* @media screen and (max-width: 1440px) {
+    .popup {
+      width: 70%;
+      height: 70%;
+    }
+    .popup-inner 
+    {
+      top: 10%;
+      left:15%;
+      bottom: 10%;
+  }
+  }
+  @media screen and (max-width: 700px) {
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      overflow: auto;
+    }
+    .popup-inner {
+      height:30%;
+      margin-top:50%;
+      width:20%;
+      right:10%;
+      top: 25%;
+      left:7%;
+    }
+  }
+  
+  @media screen and (max-width: 490px) {
+    .popup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      height: 50%;
+    }
+    .popup-inner {
+      height:80% ;
+      padding-left: 40px;
+      top: 2%;
+      width:70%;
+     padding-bottom:100px;
+     align-self: center;
+    }
+    .close-button {
+      z-index: 9999; 
+    }
+    .popup-text{
+      font-size: small;
+    }
+  }
+   */

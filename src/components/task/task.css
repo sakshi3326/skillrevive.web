@@ -1,0 +1,25 @@
+.task-container {
+    padding: 20px; /* Padding around the container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  .task-inner-container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+   
+  }
+  
+  .task-box {
+    width: 700px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    background-color: whitesmoke;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px auto; 
+
+  }
+  
