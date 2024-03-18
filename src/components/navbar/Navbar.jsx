@@ -1,66 +1,76 @@
 import React, { useState } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
-import Progress from "../popuppage/Progress";
+import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { firebaseAuth,logOut } from "../../pages/authenticated/firebase-config";
+
+
+
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [showPopup, setShowPopup] = useState(false); // State to manage the visibility of the popup
+  const [user, loading, error] = useAuthState(firebaseAuth);
 
-  const handleOptionClick = () => {
-    setShowPopup(true); // Open the popup when any option is clicked
-  };
 
-  const handleClosePopup = () => {
-    setShowPopup(false); // Close the popup
+  const handleLogout = () => {
+    logOut(); // Call the logout function
   };
 
   return (
     <div className="skillrevive__navbar">
-      {/* Navbar links */}
       <div className="skillrevive__navbar-links">
-        {/* Logo */}
         <div className="skillrevive__navbar-links_logo">
+          {/* <img src={logo} alt="logo" /> */}
           <h1>SkillRevive</h1>
         </div>
-        {/* Navigation links */}
         <div className="skillrevive__navbar-links_container">
           <p>
             <a href="#home">Home</a>
           </p>
           <p>
-            <a href="#wgpt3">What is skillrevive?</a>
+            <a href="#wskillrevive">What is skillrevive?</a>
           </p>
           <p>
-            <a href="#" onClick={handleOptionClick}>
-              Browse Talents
-            </a>
+            <a href="#possibility">Browse Talents</a>
           </p>
           <p>
-            <a href="#" onClick={handleOptionClick}>
-              Browse Works
-            </a>
+            <a href="#features">Browse Works</a>
           </p>
           <p>
-            <a href="#" onClick={handleOptionClick}>
-              Blogs
-            </a>
+            <a href="#blog">Blogs</a>
           </p>
           <p>
-            <a href="#" onClick={handleOptionClick}>
-              Chat with us
-            </a>
+            <a href="#chat">Chat with us</a>
           </p>
         </div>
       </div>
-      {/* Sign up / Sign in buttons */}
       <div className="skillrevive__navbar-sign">
-        <p onClick={handleOptionClick}>Sign in</p>
-        <button type="button" onClick={handleOptionClick}>
-          Sign up
-        </button>
+      
+        {user ? (
+          
+          <div className="current_user_img" style={{display:"flex"}}>
+            <a href="/profile">
+              <img src={user.photoURL} alt="" />
+            </a>
+            {/* Display user's photo URL */}
+            {/* <p><strong>Photo URL:</strong> {user.photoURL}</p> */}
+            {/* Logout button */}
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+          
+        ) : (
+          <div style={{display:"flex"}}>
+        <NavLink to="/login">
+          <p>Sign in</p>
+        </NavLink>
+
+        <NavLink to="/toggle">
+          <button type="button">Sign up</button>
+        </NavLink>
+        </div>
+        )}
       </div>
-      {/* Mobile menu toggle */}
       <div className="skillrevive__navbar-menu">
         {toggleMenu ? (
           <RiCloseLine
@@ -75,7 +85,6 @@ const Navbar = () => {
             onClick={() => setToggleMenu(true)}
           />
         )}
-        {/* Mobile menu links */}
         {toggleMenu && (
           <div className="skillrevive__navbar-menu_container scale-up-center">
             <div className="skillrevive__navbar-menu_container-links">
@@ -83,40 +92,28 @@ const Navbar = () => {
                 <a href="#home">Home</a>
               </p>
               <p>
-                <a href="#wgpt3">What is skillrevive?</a>
+                <a href="#wskillrevive">What is skillrevive?</a>
               </p>
               <p>
-                <a href="#" onClick={handleOptionClick}>
-                  Browse Talents
-                </a>
+                <a href="#possibility">Browse Talents</a>
               </p>
               <p>
-                <a href="#" onClick={handleOptionClick}>
-                  Browse Works
-                </a>
+                <a href="#features">Browse Works</a>
               </p>
               <p>
-                <a href="#" onClick={handleOptionClick}>
-                  Blogs
-                </a>
+                <a href="#blog">Blogs</a>
               </p>
               <p>
-                <a href="#" onClick={handleOptionClick}>
-                  Chat with us
-                </a>
+                <a href="#chat">Chat with us</a>
               </p>
             </div>
             <div className="skillrevive__navbar-menu_container-links-sign">
-              <p onClick={handleOptionClick}>Sign in</p>
-              <button type="button" onClick={handleOptionClick}>
-                Sign up
-              </button>
+              <p>Sign in</p>
+              <button type="button">Sign up</button>
             </div>
           </div>
         )}
       </div>
-      {/* Render the popup */}
-      {showPopup && <Progress onClose={handleClosePopup} />}
     </div>
   );
 };

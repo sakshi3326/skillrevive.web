@@ -15,7 +15,7 @@ import TogglePage from "../src/pages/toggle/TogglePage";
 import Login from "../src/pages/login/LoginPage";
 
 import UserProfile from "../src/pages/userprofilepage/UserprofilePage";
-import Task from "../src/components/task/Task"
+
 
 const App = () => {
   return (
@@ -24,9 +24,10 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/toggle" element={<TogglePage />} />
         <Route path="/login" element={<Login />} />
+//         <Route path="/profile" element={<Profile />} />
 
         <Route path="/userprofile" element={<UserProfile />} />
-        <Route path="/task" element={<Task />} />
+//         <Route path="/task" element={<Task />} />
 
         <Route
           path="/"
