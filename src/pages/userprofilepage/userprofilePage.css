@@ -9,6 +9,7 @@
 
 .userprofile {
   padding-top: 50px;
-  background-color: rgba(205, 236, 240, 1);
+  /* background-color: rgba(205, 236, 240, 1); */
+  background-color: rgba(4, 44, 84, 1);
   /* height: calc(100vh - 138px); */
 }
