@@ -4,7 +4,7 @@ import "./userprofilePage.css";
 import Navbar from "../../components/navbar/Navbar";
 const UserProfile = () => {
   return (
-    <div className="bg">
+    <div>
       <div className="nav">
         <Navbar />
       </div>
